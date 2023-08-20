@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["dependencies"]
+name = "logia_gen"
+version = "0.0.1"
+authors = [
+    { name="Victor Quilon Ranera", email="v.quilonr@gmail.com" },
+]
+description = "AI project for automatation of AI generative open models, such as Stable Difusion, Warp Fusion, Super Sampling, Super Resolution and more."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: GNU GENERAL PUBLIC LICENSE",
+    "Operating System :: OS Independent",
+]
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies = {dev = { file = ["requirements-dev.txt"] }}
+
+[project.urls]
+"Github" = "https://github.com/vquilon/logIA-pixel-generative"
